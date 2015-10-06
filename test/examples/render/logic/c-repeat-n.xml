@@ -1,0 +1,6 @@
+<craft>
+    <cube c-repeat="5"></cube>
+    <script>
+        $('cube').should.have.length(5)
+    </script>
+</craft>

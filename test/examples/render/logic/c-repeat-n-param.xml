@@ -1,0 +1,9 @@
+<craft>
+    <param name="n" default="6"/>
+    <cube c-repeat="n"></cube>
+    <sphere c-repeat="n/2"></sphere>
+    <script>
+        $('cube').should.have.length(6)
+        $('sphere').should.have.length(3)
+    </script>
+</craft>
