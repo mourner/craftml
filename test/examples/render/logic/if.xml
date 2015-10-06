@@ -1,0 +1,7 @@
+<craft>
+    <cube c-if="false"></cube>
+    <cube></cube>
+    <script>
+        $('cube').should.have.length(1)
+    </script>
+</craft>

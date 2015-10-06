@@ -1,0 +1,10 @@
+<craft>
+    <param name="type" default="foo"/>
+    <cube c-if="type == 'bar'"></cube>
+    <cube></cube>
+    <sphere c-if="type == 'foo'"></sphere>
+    <script>
+        $('cube').should.have.length(1)
+        $('sphere').should.have.length(1)
+    </script>
+</craft>

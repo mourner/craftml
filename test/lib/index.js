@@ -101,7 +101,7 @@ module.exports = function(src){
         ])
 
         // .spread(function(){})
-        .spread(doChecks)
+        // .spread(doChecks)
 
 
 }

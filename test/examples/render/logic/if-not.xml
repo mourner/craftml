@@ -1,0 +1,10 @@
+<craft>
+    <param name="show" default="true"/>
+    <cube c-if="show"></cube>
+    <cube></cube>
+    <sphere c-if="!show"></sphere>
+    <script>
+        $('cube').should.have.length(2)
+        $('sphere').should.have.length(0)
+    </script>
+</craft>
