@@ -142,6 +142,22 @@ chai.use(function(_chai, utils) {
         );
     })
 
+    Assertion.addMethod('throw', function(expected) {
+        let [solid, debugName] = resolve.call(this)
+        var actual = _.get(solid, 'error.name')
+
+        // first, our instanceof check, shortcut
+        // new Assertion(this._obj).to.be.eql(3)
+
+        this.assert(
+            expected === actual,
+            "expected " + debugName + " to throw #{exp} but got #{act}",
+            "expected " + debugName + " not to throw #{act}",
+            expected,
+            actual
+        )
+    })
+
     Assertion.addMethod('id', function(expected) {
         let [solid, debugName] = resolve.call(this)
         // var name = getName(this._obj)

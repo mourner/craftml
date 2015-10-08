@@ -1,0 +1,6 @@
+<craft>
+    <g c-try l="divdiv(3)"><cube></cube></g>
+    <script>
+        $('g').should.throw('RenderError')
+    </script>
+</craft>

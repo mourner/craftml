@@ -1,0 +1,11 @@
+<craft>
+    <g c-try>
+        <script>
+            var x = 1
+            bad
+        </script>
+    </g>
+    <script>
+        $('g').should.throw('ScriptError')
+    </script>
+</craft>

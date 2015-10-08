@@ -1,0 +1,7 @@
+<craft>
+    <g></g>
+    <foo c-try></foo>
+    <script>
+        $('foo').should.throw('RenderError')
+    </script>
+</craft>
