@@ -1,0 +1,12 @@
+<craft>
+    <g c-repeat="s in [1,2]">
+        <cube c-repeat="q in [2,3]" t="scale({{s*q}})"/>
+    </g>
+    <script>
+        $('cube').should.have.length(4)
+            .first.with.size(20,20,20)
+            .second.with.size(30,30,30)
+            .third.with.size(40,40,40)
+            .fourth.with.size(60,60,60)
+    </script>
+</craft>

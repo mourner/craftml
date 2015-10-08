@@ -1,0 +1,9 @@
+<craft>
+    <cube c-repeat="s,i in [1,2,3]" t="scale({{s}})" id="{{i}}"></cube>
+    <script>
+        $('cube').should.have.length(3)
+            .first.with.size(10,10,10).and.id(0)
+            .second.with.size(20,20,20).and.id(1)
+            .third.with.size(30,30,30).and.id(2)
+    </script>
+</craft>

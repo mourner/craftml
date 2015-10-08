@@ -143,17 +143,21 @@ chai.use(function(_chai, utils) {
     })
 
     Assertion.addMethod('id', function(expected) {
-        var name = getName(this._obj)
-        var actual = this._obj.src.attribs.id;
+        let [solid, debugName] = resolve.call(this)
+        // var name = getName(this._obj)
+        //var actual = this._obj.src.attribs.id;
+        var actual = solid.attribs.id;
 
         // first, our instanceof check, shortcut
         // new Assertion(this._obj).to.be.eql(3)
 
-        // second, our type check
         this.assert(
-            expected == actual, "expected " + name + "'s id to be #{exp} but got #{act}", "expected " + name + "'s id not be #{act}", expected // expected
-            , actual // actual
-        );
+            expected === actual,
+            "expected " + debugName + "'s id to be #{exp} but got #{act}",
+            "expected " + debugName + "'s id not to be #{act}",
+            expected,
+            actual
+        )
     })
 
     Assertion.addMethod('name', function(expected) {

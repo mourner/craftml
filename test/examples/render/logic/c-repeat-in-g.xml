@@ -1,0 +1,17 @@
+<craft>
+    <g c-repeat="s in [1,2,3]" id="{{s}}">
+        <cube t="scale({{s}})"/>
+        <sphere/>
+    </g>
+    <script>
+        $('g').should.have
+            .first.with.id(1)
+            .second.with.id(2)
+            .third.with.id(3)
+        $('cube').should.have.length(3)
+            .first.with.size(10,10,10)
+            .second.with.size(20,20,20)
+            .third.with.size(30,30,30)
+        $('sphere').should.have.length(3)
+    </script>
+</craft>
